@@ -65,8 +65,9 @@
 <meta name="twitter:image" content="https://sevsin.ru/og-image.png">
 <meta name="twitter:image:alt" content="Stepan Evsin — продающие сайты для бизнеса">
 <meta name="twitter:url" content="https://sevsin.ru/">
+<link rel="preload" as="image" href="/logo-448.webp" imagesrcset="/logo-224.webp 224w, /logo-448.webp 448w, /logo-672.webp 672w" imagesizes="(max-width:900px) 150px, 224px" fetchpriority="high">
 <link href="/assets/fonts/fonts.css" rel="stylesheet">
-<script type="importmap">{"imports":{"three":"/vendor/three/three.module.js","three/addons/":"/vendor/three/addons/"}}</script>
+<script type="importmap">{"imports":{"three":"/vendor/three/three.module.min.js"}}</script>
 <style>
 :root{--bg:#070707;--panel:#111010;--panel2:#1a1817;--fg:#f3efe9;--muted:#a39b95;--faint:#5c5551;--line:#221f1d;--red:#e3172b;--red2:#ff3341;--paper:#ecebe8;--ink:#0d0d0d;--serif:"Cormorant Garamond","Times New Roman",serif;--script:"Great Vibes",cursive;--brush:"Kaushan Script",cursive;--cond:"Oswald","Arial Narrow",sans-serif;--head:var(--serif);--wide:"Unbounded",Arial,sans-serif;--body:"Onest",system-ui,sans-serif;--gut:clamp(18px,3.4vw,48px)}
 *{box-sizing:border-box;margin:0}
@@ -88,8 +89,7 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .lbl::before{content:'+ ';color:var(--red2)}
 
 /* film grain over everything */
-.grain{position:fixed;inset:-50%;z-index:55;pointer-events:none;opacity:.07;animation:grain 1s steps(6) infinite}
-@keyframes grain{0%,100%{transform:translate(0,0)}17%{transform:translate(-6%,4%)}33%{transform:translate(5%,-7%)}50%{transform:translate(-3%,8%)}67%{transform:translate(7%,2%)}83%{transform:translate(-8%,-3%)}}
+.grain{position:fixed;inset:-50%;z-index:55;pointer-events:none;opacity:.07;}
 
 /* letters come out of a blur */
 .sp .w{display:inline-block;white-space:nowrap}
@@ -108,6 +108,7 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .nav-in{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:16px var(--gut) 0}
 .nav a,.nav button{pointer-events:auto}
 .brand{display:flex;align-items:center;gap:16px;color:#fff;transition:color .4s}
+.brand picture{display:block;flex:none}
 .brand-logo{display:block;width:clamp(150px,18vw,224px);height:auto;flex:none;filter:drop-shadow(0 2px 18px rgba(0,0,0,.3))}
 .brand span{padding-top:0;font:500 10px/1.65 var(--body);letter-spacing:.2em;text-transform:uppercase;opacity:.82;white-space:pre-line}
 .nav.light .brand{color:var(--ink)}
@@ -444,7 +445,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
  .hbtn{flex-direction:row}.hbtn .pill{width:auto;flex:none;min-height:42px}
  .i-d,.i-f,.i-sub{display:none}.stack{height:42vh}
 }
-@media(prefers-reduced-motion:reduce){.grain,.final{animation:none}}
+@media(prefers-reduced-motion:reduce){.final{animation:none}}
 [data-owner=copy]{user-select:none;-webkit-user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 @media(min-width:1800px){.wrap{max-width:1640px}body{font-size:18px}}
 </style>
@@ -634,7 +635,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
             "@type": "CreativeWork",
             "name": "MaxxMoto",
             "url": "https://maxxmoto.github.io/maxxmoto/",
-            "image": "https://sevsin.ru/assets/brusok.jpg",
+            "image": "https://sevsin.ru/assets/brusok.webp",
             "description": "Витрина магазина мототехники: каталог, карточки товаров и оформление заказа.",
             "creator": {
               "@id": "https://sevsin.ru/#person"
@@ -648,7 +649,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
             "@type": "CreativeWork",
             "name": "Доктор Гондусов",
             "url": "https://drgondusov.ru/",
-            "image": "https://sevsin.ru/assets/mirra.jpg",
+            "image": "https://sevsin.ru/assets/mirra.webp",
             "description": "Сайт врача-гастроэнтеролога: услуги, приём и запись.",
             "creator": {
               "@id": "https://sevsin.ru/#person"
@@ -662,7 +663,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
             "@type": "CreativeWork",
             "name": "Доктор Батигян",
             "url": "https://batigyan-endoscopy.ru/",
-            "image": "https://sevsin.ru/assets/kvadrat.jpg",
+            "image": "https://sevsin.ru/assets/kvadrat.webp",
             "description": "Сайт врача-эндоскописта: диагностика и запись на приём.",
             "creator": {
               "@id": "https://sevsin.ru/#person"
@@ -676,7 +677,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
             "@type": "CreativeWork",
             "name": "Telegram Botss",
             "url": "https://telegrambotss.ru/",
-            "image": "https://sevsin.ru/assets/plast.jpg",
+            "image": "https://sevsin.ru/assets/plast.webp",
             "description": "Сайт студии разработки Telegram-ботов и Mini Apps.",
             "creator": {
               "@id": "https://sevsin.ru/#person"
@@ -694,7 +695,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><img class="brand-logo" src="/logo.png" alt="Stepan Evsin" width="1772" height="428" decoding="async"><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Студия полного цикла</span></a>
+    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><picture><source type="image/webp" srcset="/logo-224.webp 224w, /logo-448.webp 448w, /logo-672.webp 672w" sizes="(max-width:900px) 150px, 224px"><img class="brand-logo" src="/logo-448.png" alt="Stepan Evsin" width="448" height="108" decoding="async" fetchpriority="high"></picture><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Студия полного цикла</span></a>
     <nav class="menu" aria-label="Разделы"><a href="#about" data-edit="nav.about" data-label="Меню: обо мне">Обо мне</a><a href="#work" data-edit="nav.work" data-label="Меню: работы">Работы</a><a href="#reviews" class="nrv" hidden data-edit="nav.reviews" data-label="Меню: отзывы">Отзывы</a><a href="#steps" data-edit="nav.steps" data-label="Меню: как заказать">Как заказать</a><a class="cta" href="https://t.me/finpolq" data-contact target="_blank" rel="noopener" data-edit="nav.cta" data-label="Кнопка в меню">Написать</a></nav>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav">Меню <i></i></button>
   </div>
@@ -880,16 +881,16 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
   <div class="vstage" id="vS"><iframe id="vF" title="Предпросмотр сайта"></iframe></div>
 </div>
 
-<script id="cms">window.CMS={"owner":{"name":"Stepan Evsin","telegram":"finpolq"},"texts":{},"works":[{"id":"maxxmoto","n":"MaxxMoto","niche":"Мототехника","tag":"Витрина магазина / каталог","sub":"Магазин мототехники, где всё можно выбрать и заказать.","d":"Витрина магазина: каталог мотоциклов и экипировки, фильтры, карточки товаров и оформление заказа.","feats":"Каталог мототехники\nКарточки товаров\nЗаявка и заказ","price":"от 60 000 ₽","term":"3 недели","link":"https://maxxmoto.github.io/maxxmoto/","img":"assets/brusok.jpg","preview":false,"hidden":false},{"id":"drgondusov","n":"Доктор Гондусов","niche":"Гастроэнтерология","tag":"Сайт врача / запись","sub":"Сайт врача-гастроэнтеролога: услуги, приём и запись.","d":"Информация о враче и услугах, ответы на частые вопросы и онлайн-запись на консультацию.","feats":"Услуги и цены\nЗапись на приём\nОтветы на вопросы","price":"от 55 000 ₽","term":"2–3 недели","link":"https://drgondusov.ru/","img":"assets/mirra.jpg","preview":false,"hidden":false},{"id":"batigyan","n":"Доктор Батигян","niche":"Эндоскопия","tag":"Сайт врача / диагностика","sub":"Сайт врача-эндоскописта: диагностика и запись на приём.","d":"Понятные описания процедур, подготовка к обследованию и онлайн-запись на приём.","feats":"Описание процедур\nПодготовка к обследованию\nЗапись на приём","price":"от 45 000 ₽","term":"2 недели","link":"https://batigyan-endoscopy.ru/","img":"assets/kvadrat.jpg","preview":false,"hidden":false},{"id":"telegrambotss","n":"Telegram Botss","niche":"Разработка ботов","tag":"Сайт студии / Telegram-боты","sub":"Студия, которая делает ботов для Telegram.","d":"Витрина услуг по разработке ботов: сценарии, интеграции, поддержка и примеры работ.","feats":"Услуги и кейсы\nСценарии ботов\nЗаявка на разработку","price":"от 40 000 ₽","term":"2 недели","link":"https://telegrambotss.ru/","img":"assets/plast.jpg","preview":false,"hidden":false}],"reviews":[],"updated":1794422456047}</script>
+<script id="cms">window.CMS={"owner":{"name":"Stepan Evsin","telegram":"finpolq"},"texts":{},"works":[{"id":"maxxmoto","n":"MaxxMoto","niche":"Мототехника","tag":"Витрина магазина / каталог","sub":"Магазин мототехники, где всё можно выбрать и заказать.","d":"Витрина магазина: каталог мотоциклов и экипировки, фильтры, карточки товаров и оформление заказа.","feats":"Каталог мототехники\nКарточки товаров\nЗаявка и заказ","price":"от 60 000 ₽","term":"3 недели","link":"https://maxxmoto.github.io/maxxmoto/","img":"assets/brusok.webp","preview":false,"hidden":false},{"id":"drgondusov","n":"Доктор Гондусов","niche":"Гастроэнтерология","tag":"Сайт врача / запись","sub":"Сайт врача-гастроэнтеролога: услуги, приём и запись.","d":"Информация о враче и услугах, ответы на частые вопросы и онлайн-запись на консультацию.","feats":"Услуги и цены\nЗапись на приём\nОтветы на вопросы","price":"от 55 000 ₽","term":"2–3 недели","link":"https://drgondusov.ru/","img":"assets/mirra.webp","preview":false,"hidden":false},{"id":"batigyan","n":"Доктор Батигян","niche":"Эндоскопия","tag":"Сайт врача / диагностика","sub":"Сайт врача-эндоскописта: диагностика и запись на приём.","d":"Понятные описания процедур, подготовка к обследованию и онлайн-запись на приём.","feats":"Описание процедур\nПодготовка к обследованию\nЗапись на приём","price":"от 45 000 ₽","term":"2 недели","link":"https://batigyan-endoscopy.ru/","img":"assets/kvadrat.webp","preview":false,"hidden":false},{"id":"telegrambotss","n":"Telegram Botss","niche":"Разработка ботов","tag":"Сайт студии / Telegram-боты","sub":"Студия, которая делает ботов для Telegram.","d":"Витрина услуг по разработке ботов: сценарии, интеграции, поддержка и примеры работ.","feats":"Услуги и кейсы\nСценарии ботов\nЗаявка на разработку","price":"от 40 000 ₽","term":"2 недели","link":"https://telegrambotss.ru/","img":"assets/plast.webp","preview":false,"hidden":false}],"reviews":[],"updated":1794422456047}</script>
 <script>
 /* Content comes from the admin panel (window.CMS, written in by the server). Without it the page uses what is below. */
 const CMS=window.CMS||{
  owner:{name:'Stepan Evsin',telegram:'finpolq'},texts:{},reviews:[],
  works:[
-  {id:'maxxmoto',n:'MaxxMoto',niche:'Мототехника',tag:'Витрина магазина / каталог',sub:'Магазин мототехники, где всё можно выбрать и заказать.',d:'Витрина магазина: каталог мотоциклов и экипировки, фильтры, карточки товаров и оформление заказа.',feats:'Каталог мототехники\nКарточки товаров\nЗаявка и заказ',price:'от 60 000 ₽',term:'3 недели',link:'https://maxxmoto.github.io/maxxmoto/',img:'assets/brusok.jpg',preview:false,hidden:false},
-  {id:'drgondusov',n:'Доктор Гондусов',niche:'Гастроэнтерология',tag:'Сайт врача / запись',sub:'Сайт врача-гастроэнтеролога: услуги, приём и запись.',d:'Информация о враче и услугах, ответы на частые вопросы и онлайн-запись на консультацию.',feats:'Услуги и цены\nЗапись на приём\nОтветы на вопросы',price:'от 55 000 ₽',term:'2–3 недели',link:'https://drgondusov.ru/',img:'assets/mirra.jpg',preview:false,hidden:false},
-  {id:'batigyan',n:'Доктор Батигян',niche:'Эндоскопия',tag:'Сайт врача / диагностика',sub:'Сайт врача-эндоскописта: диагностика и запись на приём.',d:'Понятные описания процедур, подготовка к обследованию и онлайн-запись на приём.',feats:'Описание процедур\nПодготовка к обследованию\nЗапись на приём',price:'от 45 000 ₽',term:'2 недели',link:'https://batigyan-endoscopy.ru/',img:'assets/kvadrat.jpg',preview:false,hidden:false},
-  {id:'telegrambotss',n:'Telegram Botss',niche:'Разработка ботов',tag:'Сайт студии / Telegram-боты',sub:'Студия, которая делает ботов для Telegram.',d:'Витрина услуг по разработке ботов: сценарии, интеграции, поддержка и примеры работ.',feats:'Услуги и кейсы\nСценарии ботов\nЗаявка на разработку',price:'от 40 000 ₽',term:'2 недели',link:'https://telegrambotss.ru/',img:'assets/plast.jpg',preview:false,hidden:false}
+  {id:'maxxmoto',n:'MaxxMoto',niche:'Мототехника',tag:'Витрина магазина / каталог',sub:'Магазин мототехники, где всё можно выбрать и заказать.',d:'Витрина магазина: каталог мотоциклов и экипировки, фильтры, карточки товаров и оформление заказа.',feats:'Каталог мототехники\nКарточки товаров\nЗаявка и заказ',price:'от 60 000 ₽',term:'3 недели',link:'https://maxxmoto.github.io/maxxmoto/',img:'assets/brusok.webp',preview:false,hidden:false},
+  {id:'drgondusov',n:'Доктор Гондусов',niche:'Гастроэнтерология',tag:'Сайт врача / запись',sub:'Сайт врача-гастроэнтеролога: услуги, приём и запись.',d:'Информация о враче и услугах, ответы на частые вопросы и онлайн-запись на консультацию.',feats:'Услуги и цены\nЗапись на приём\nОтветы на вопросы',price:'от 55 000 ₽',term:'2–3 недели',link:'https://drgondusov.ru/',img:'assets/mirra.webp',preview:false,hidden:false},
+  {id:'batigyan',n:'Доктор Батигян',niche:'Эндоскопия',tag:'Сайт врача / диагностика',sub:'Сайт врача-эндоскописта: диагностика и запись на приём.',d:'Понятные описания процедур, подготовка к обследованию и онлайн-запись на приём.',feats:'Описание процедур\nПодготовка к обследованию\nЗапись на приём',price:'от 45 000 ₽',term:'2 недели',link:'https://batigyan-endoscopy.ru/',img:'assets/kvadrat.webp',preview:false,hidden:false},
+  {id:'telegrambotss',n:'Telegram Botss',niche:'Разработка ботов',tag:'Сайт студии / Telegram-боты',sub:'Студия, которая делает ботов для Telegram.',d:'Витрина услуг по разработке ботов: сценарии, интеграции, поддержка и примеры работ.',feats:'Услуги и кейсы\nСценарии ботов\nЗаявка на разработку',price:'от 40 000 ₽',term:'2 недели',link:'https://telegrambotss.ru/',img:'assets/plast.webp',preview:false,hidden:false}
  ]};
 const WORKS=CMS.works.filter(w=>!w.hidden);
 window.RIBBON=WORKS.map(w=>w.img).filter(Boolean);
@@ -1022,7 +1023,7 @@ seen.observe($('#work'));seen.observe($('#contact'));
  sec.style.height=(N*90+60)+'vh';
  const imgs=WORKS.map(w=>w.img).filter(Boolean);
  wall.innerHTML=Array.from({length:30},(_,i)=>`<i style="background-image:url('${esc(imgs[(i*7)%imgs.length]||'')}')"></i>`).join('');
- stack.innerHTML=WORKS.map((w,i)=>{const m=/^assets\/([\w-]+)\.jpg$/.exec(w.img||''),src=k=>m?`assets/${m[1]}${k}.jpg`:w.img,im=k=>w.img?`<span class="scr"><img src="${esc(src(k))}" alt="${k?'':esc(w.n+' — '+w.niche)}" loading="lazy" decoding="async"></span>`:'<span class="scr"></span>';
+ stack.innerHTML=WORKS.map((w,i)=>{const m=/^assets\/([\w-]+)\.webp$/.exec(w.img||''),src=k=>m?`assets/${m[1]}${k}.webp`:w.img,im=k=>w.img?`<span class="scr"><img src="${esc(src(k))}" alt="${k?'':esc(w.n+' — '+w.niche)}" loading="lazy" decoding="async"></span>`:'<span class="scr"></span>';
   return `<div class="set" data-i="${i}"><a class="k k1" href="${esc(w.link)}" target="_blank" rel="noopener" data-op="${i}" aria-label="Открыть сайт ${esc(w.n)}"><span class="bz">${im('')}</span><span class="neck"></span><span class="base"></span></a><span class="k k3" ${w.preview?`data-v="${i}"`:''}><span class="bz">${im('-t')}</span></span><span class="k k2" ${w.preview?`data-v="${i}"`:''}><span class="bz">${im('-m')}</span></span></div>`}).join('');
  const sets=$$('.set'),pad=i=>String(i+1).padStart(2,'0');
  $('#pZ').textContent=pad(N-1);
@@ -1180,7 +1181,9 @@ $('#vX').onclick=closeV;
 addEventListener('keydown',e=>{if(e.key==='Escape')closeV()});
 </script>
 <script type="module" src="scene.js"></script>
-<script type="module" src="bird.js"></script>
-<script type="module" src="burn.js"></script>
+<script type="module">
+const lazyScene=(sel,src)=>{const el=document.querySelector(sel);if(!el)return;let done=false;const io=new IntersectionObserver(es=>{if(done||!es.some(e=>e.isIntersecting))return;done=true;io.disconnect();import(src).catch(()=>{})},{rootMargin:'600px 0px'});io.observe(el)};
+lazyScene('.bird','./bird.js');lazyScene('.burn','./burn.js');
+</script>
 </body>
 </html>

@@ -5,9 +5,9 @@ import * as THREE from 'three';
 
 const host=document.querySelector('.hero'),duo=document.querySelector('.duo');
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-const weak=(navigator.hardwareConcurrency||8)<=4||innerWidth<700;
+const weak=(navigator.hardwareConcurrency||8)<=4||innerWidth<700||(navigator.deviceMemory||8)<=4;
 const r=new THREE.WebGLRenderer({antialias:true,alpha:true,premultipliedAlpha:true});
-r.setPixelRatio(Math.min(devicePixelRatio,weak?1.25:2));
+r.setPixelRatio(Math.min(devicePixelRatio,weak?1:1.5));
 r.domElement.className='gl';
 r.autoClear=false;r.setClearColor(0x000000,0);
 host.prepend(r.domElement);
@@ -72,7 +72,7 @@ const fireMesh=new THREE.Mesh(quad,new THREE.ShaderMaterial({uniforms:BU,depthTe
 const fireScene=new THREE.Scene();fireScene.add(fireMesh);
 
 /* ---------- the ribbon ---------- */
-const IMGS=(Array.isArray(window.RIBBON)&&window.RIBBON.length?window.RIBBON:['brusok','mirra','kvadrat','plast'].map(n=>`assets/${n}.jpg`)).slice(0,16);
+const IMGS=(Array.isArray(window.RIBBON)&&window.RIBBON.length?window.RIBBON:['brusok','mirra','kvadrat','plast'].map(n=>`assets/${n}.webp`)).slice(0,16);
 const NI=IMGS.length,TILES=NI*Math.max(1,Math.round(10/NI));
 const P=t=>new THREE.Vector3(5.4*Math.sin(t),2.3*Math.sin(2*t),3.4*Math.cos(t));
 const SEG=weak?300:540,WIDTH=1.72,PW=6;
@@ -123,7 +123,7 @@ const mat=new THREE.ShaderMaterial({uniforms:U,side:THREE.DoubleSide,transparent
 root.add(new THREE.Mesh(geo,mat));
 
 /* sand: grains spread over the ribbon, seen only where it has crumbled; they blow downwind and fall */
-const NP=weak?24000:70000,gp=[],gu=[],gr=[];
+const NP=weak?16000:50000,gp=[],gu=[],gr=[];
 for(let k=0;k<NP;k++){const i=Math.floor(Math.random()*SEG),f=Math.random(),s=Math.random();
  const a=Q(i,s),b=Q(i+1,s),p=a.lerp(b,f);gp.push(p.x,p.y,p.z);gu.push(S[i].u+(S[i+1].u-S[i].u)*f,s);
  gr.push(Math.random(),Math.random(),Math.random(),Math.random())}
@@ -203,9 +203,10 @@ function crumble(now,dt){
 
 /* progress through the pinned first block, 0..1 */
 const prog=()=>{const b=duo.getBoundingClientRect(),span=duo.offsetHeight-innerHeight;return span>0?Math.max(0,Math.min(1,-b.top/span)):0};
-let running=true,raf=0,t0=performance.now(),last=t0,slow=0,count=0,gone=false;
+let running=true,raf=0,t0=performance.now(),last=t0,slow=0,count=0,gone=false,lastDraw=0;
 function frame(now){
- raf=0;const dt=Math.min((now-last)/1000,.05);last=now;const t=(now-t0)/1000;
+ raf=0;if(weak&&now-lastDraw<33){if(running&&!document.hidden)raf=requestAnimationFrame(frame);return}
+ lastDraw=now;const dt=Math.min((now-last)/1000,.05);last=now;const t=(now-t0)/1000;
  if(++count<90)slow+=dt;else if(count===90&&slow/90>.03&&r.getPixelRatio()>1){r.setPixelRatio(1);size()}
  const q=prog(),burn=reduce?(q>.3?1:0):THREE.MathUtils.smoothstep(q,.04,.36),p=Math.min(1,q/.36);
  BU.uB.value=burn;
