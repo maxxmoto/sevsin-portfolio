@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://sevsin.ru/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sevsin.ru/assets/brusok.jpg</image:loc>
+      <image:title>MaxxMoto — витрина магазина мототехники</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sevsin.ru/assets/mirra.jpg</image:loc>
+      <image:title>Доктор Гондусов — сайт врача-гастроэнтеролога</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sevsin.ru/assets/kvadrat.jpg</image:loc>
+      <image:title>Доктор Батигян — сайт врача-эндоскописта</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sevsin.ru/assets/plast.jpg</image:loc>
+      <image:title>Telegram Botss — студия разработки Telegram-ботов</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sevsin.ru/og-image.png</image:loc>
+      <image:title>Stepan Evsin — продающие сайты для бизнеса</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -20,7 +20,10 @@ class Handler(SimpleHTTPRequestHandler):
         ".png": "image/png",
         ".webp": "image/webp",
         ".svg": "image/svg+xml",
+        ".ico": "image/x-icon",
         ".json": "application/json",
+        ".webmanifest": "application/manifest+json",
+        ".xml": "application/xml",
         ".html": "text/html; charset=utf-8",
     }
 

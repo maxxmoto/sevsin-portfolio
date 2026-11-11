@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /serve.py
+
+Sitemap: https://sevsin.ru/sitemap.xml
