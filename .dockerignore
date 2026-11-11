@@ -1,0 +1,8 @@
+.git
+.gitignore
+serve.py
+*.md
+*.log
+*.zip
+__pycache__
+node_modules
