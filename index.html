@@ -142,11 +142,11 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 @media(max-width:900px){.burn canvas{top:-17vh;height:34vh}}
 .nav-in{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:16px var(--gut) 0}
 .nav a,.nav button{pointer-events:auto}
-.brand{display:flex;align-items:flex-start;gap:16px;color:#fff;transition:color .4s}
-.brand b{font:400 clamp(40px,3.6vw,54px)/1 var(--script);padding:2px 8px 0 0;text-shadow:0 2px 20px rgba(0,0,0,.25)}
-.brand span{padding-top:12px;font:500 10px/1.75 var(--body);letter-spacing:.2em;text-transform:uppercase;opacity:.82;white-space:pre-line}
+.brand{display:flex;align-items:center;gap:16px;color:#fff;transition:color .4s}
+.brand-logo{display:block;width:clamp(150px,18vw,224px);height:auto;flex:none;filter:drop-shadow(0 2px 18px rgba(0,0,0,.3))}
+.brand span{padding-top:0;font:500 10px/1.65 var(--body);letter-spacing:.2em;text-transform:uppercase;opacity:.82;white-space:pre-line}
 .nav.light .brand{color:var(--ink)}
-.nav.light .brand b{text-shadow:none}
+.nav.light .brand-logo{filter:brightness(0)}
 .menu{display:flex;align-items:center;gap:6px;padding:4px 0}
 .menu a{display:inline-flex;align-items:center;min-height:42px;padding:0 14px;font:700 12px var(--body);letter-spacing:.18em;text-transform:uppercase;color:#ffe1e4;text-shadow:0 0 2px #ff5a6a,0 0 8px rgba(255,40,60,.95),0 0 20px rgba(255,30,50,.7),0 0 40px rgba(255,20,40,.45);transition:color .25s,text-shadow .25s}
 .nav.light .menu a{color:#d1102a;text-shadow:0 0 6px rgba(255,40,60,.55),0 0 18px rgba(255,30,50,.35)}
@@ -736,7 +736,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="В начало"><b data-owner="name">Stepan Evsin</b><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Студия полного цикла</span></a>
+    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><img class="brand-logo" src="/logo.png" alt="Stepan Evsin" width="1772" height="428" decoding="async"><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Студия полного цикла</span></a>
     <nav class="menu" aria-label="Разделы"><a href="#about" data-edit="nav.about" data-label="Меню: обо мне">Обо мне</a><a href="#work" data-edit="nav.work" data-label="Меню: работы">Работы</a><a href="#reviews" class="nrv" hidden data-edit="nav.reviews" data-label="Меню: отзывы">Отзывы</a><a href="#steps" data-edit="nav.steps" data-label="Меню: как заказать">Как заказать</a><a class="cta" href="https://t.me/finpolq" data-contact target="_blank" rel="noopener" data-edit="nav.cta" data-label="Кнопка в меню">Написать</a></nav>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav">Меню <i></i></button>
   </div>
