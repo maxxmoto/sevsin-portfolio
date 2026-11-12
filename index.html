@@ -160,10 +160,6 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .go .hero .sig{clip-path:inset(-20% -10% -20% 0);transition:clip-path 2.2s cubic-bezier(.6,.05,.2,1) .5s}
 .hbtn{display:flex;gap:10px;flex-wrap:wrap}
 .hero .pill,.final .pill{border-radius:999px}
-.hero .hbtn .pill{position:relative;overflow:hidden;isolation:isolate}
-.hero .hbtn .pill>span{position:relative;z-index:2}
-.hero .hbtn .pill::after{content:"";position:absolute;top:-120%;left:-85%;width:48%;height:340%;z-index:1;pointer-events:none;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.06) 28%,rgba(255,255,255,.7) 50%,rgba(255,255,255,.14) 62%,transparent 100%);filter:blur(.7px);mix-blend-mode:screen;transform:rotate(22deg) translateX(-180%);animation:pillShine 4.6s cubic-bezier(.4,0,.2,1) infinite}
-@keyframes pillShine{0%,46%{transform:rotate(22deg) translateX(-180%)}72%,100%{transform:rotate(22deg) translateX(380%)}}
 
 /* collage: paper, glossy black frame, red petals, pencil sketches, black-and-white cutouts, huge type */
 .clg{position:absolute;inset:0;z-index:1;background:radial-gradient(120% 90% at 50% 40%,#f6f5f3,#e4e2de 70%,#d8d5d0);color:var(--ink);overflow:hidden;--a:0;--o:0;--mx:0;--my:0}
@@ -446,7 +442,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
  .hbtn{flex-direction:row}.hbtn .pill{width:auto;flex:none;min-height:42px}
  .i-d,.i-f,.i-sub{display:none}.stack{height:42vh}
 }
-@media(prefers-reduced-motion:reduce){.final{animation:none}.hero .hbtn .pill::after{animation:none;opacity:0}}
+@media(prefers-reduced-motion:reduce){.final{animation:none}}
 [data-owner=copy]{user-select:none;-webkit-user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 @media(min-width:1800px){.wrap{max-width:1640px}body{font-size:18px}}
 </style>
@@ -819,7 +815,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
         <div class="h-main">
           <h1 data-edit="hero.title" data-label="Заголовок">Разрабатываю продающие сайты для&nbsp;бизнеса. Быстро и&nbsp;качественно.</h1>
           <p class="lead fade" style="--o:900ms" data-edit="hero.text" data-label="Текст под заголовком">Магазины, запись к мастеру, бронирование, каталоги. Пишу с нуля, без шаблонов и конструкторов.</p>
-          <div class="hbtn fade" style="--o:1100ms"><a class="pill" href="#work" data-edit="hero.btn1" data-label="Первая кнопка"><span>Смотреть работы</span></a></div>
+          <div class="hbtn fade" style="--o:1100ms"><a class="pill" href="#work" data-edit="hero.btn1" data-label="Первая кнопка">Смотреть работы</a></div>
         </div>
         <div class="h-side fade" style="--o:1300ms">
           <p class="clock promo"><span data-edit="hero.side" data-label="Подпись справа внизу"><b>-20%</b> скидка малому бизнесу</span></p>
