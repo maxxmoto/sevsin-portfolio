@@ -315,8 +315,7 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 /* footer */
 footer{position:relative;overflow:hidden;border-top:1px solid var(--line);padding-block:clamp(44px,6vw,78px) 22px;color:var(--faint);font-size:13.5px}
 .ft-main{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.55fr) minmax(0,.6fr);gap:clamp(26px,5vw,64px);align-items:start}
-.ft-logo{display:inline-block;font:400 clamp(42px,5vw,74px)/.9 var(--script);color:var(--fg);transform:rotate(-6deg);transform-origin:0 100%;padding:0 .25em .12em 0}
-.ft-brand p{max-width:30em;margin-top:18px;color:var(--muted);font-size:14px;line-height:1.65}
+.ft-brand p{max-width:30em;margin-top:0;color:var(--muted);font-size:14px;line-height:1.65}
 .ft-socials{display:flex;gap:10px;margin-top:20px}
 .ft-socials a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:border-color .25s,background .25s,transform .25s}
 .ft-socials a:hover{border-color:var(--red);background:rgba(227,23,43,.12);transform:translateY(-2px)}
@@ -325,11 +324,11 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 .ft-col a{display:block;padding:6px 0;font-size:14px;color:rgba(243,239,233,.72);transition:color .2s}
 .ft-col a:hover{color:#fff}
 .ft-col .ft-pill{display:inline-flex;align-items:center;justify-content:center;margin:2px 0 14px;min-height:44px;padding:0 22px;font-size:11.5px;border-radius:999px;color:#fff}
-.ft-big{margin-top:clamp(34px,6vw,76px);font:700 clamp(64px,17vw,230px)/.74 var(--cond);letter-spacing:-.02em;text-transform:uppercase;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(243,239,233,.14);user-select:none;-webkit-user-select:none;pointer-events:none}
 .ft-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:clamp(18px,3vw,32px);padding-top:16px;border-top:1px solid var(--line);font-size:12.5px}
 .ft-up{color:var(--muted);transition:color .2s}.ft-up:hover{color:#fff}
 @media(max-width:900px){.ft-main{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.ft-brand{grid-column:1/-1}}
-@media(max-width:560px){.ft-main{grid-template-columns:minmax(0,1fr);gap:26px}.ft-bottom{justify-content:flex-start}.ft-big{font-size:26vw}}
+@media(max-width:560px){
+ .hero .sig{display:none}.ft-main{grid-template-columns:minmax(0,1fr);gap:26px}.ft-bottom{justify-content:flex-start}}
 
 /* contact chooser */
 .cm{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;padding:18px}
@@ -695,7 +694,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><picture><source type="image/webp" srcset="/logo-224.webp 224w, /logo-448.webp 448w, /logo-672.webp 672w" sizes="(max-width:900px) 150px, 224px"><img class="brand-logo" src="/logo-448.png" alt="Stepan Evsin" width="448" height="108" decoding="async" fetchpriority="high"></picture><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Студия полного цикла</span></a>
+    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><picture><source type="image/webp" srcset="/logo-224.webp 224w, /logo-448.webp 448w, /logo-672.webp 672w" sizes="(max-width:900px) 150px, 224px"><img class="brand-logo" src="/logo-448.png" alt="Stepan Evsin" width="448" height="108" decoding="async" fetchpriority="high"></picture><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Сайты под ключ</span></a>
     <nav class="menu" aria-label="Разделы"><a href="#about" data-edit="nav.about" data-label="Меню: обо мне">Обо мне</a><a href="#work" data-edit="nav.work" data-label="Меню: работы">Работы</a><a href="#reviews" class="nrv" hidden data-edit="nav.reviews" data-label="Меню: отзывы">Отзывы</a><a href="#steps" data-edit="nav.steps" data-label="Меню: как заказать">Как заказать</a><a class="cta" href="https://t.me/finpolq" data-contact target="_blank" rel="noopener" data-edit="nav.cta" data-label="Кнопка в меню">Написать</a></nav>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav">Меню <i></i></button>
   </div>
@@ -733,7 +732,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
     <div class="hero">
       <div class="hero-in wrap">
         <div class="h-main">
-          <h1 data-edit="hero.title" data-label="Заголовок">Разрабатываем продающие сайты для&nbsp;бизнеса. Быстро и&nbsp;качественно.</h1>
+          <h1 data-edit="hero.title" data-label="Заголовок">Разрабатываю продающие сайты для&nbsp;бизнеса. Быстро и&nbsp;качественно.</h1>
           <p class="lead fade" style="--o:900ms" data-edit="hero.text" data-label="Текст под заголовком">Магазины, запись к мастеру, бронирование, каталоги. Пишу с нуля, без шаблонов и конструкторов.</p>
           <div class="hbtn fade" style="--o:1100ms"><a class="pill" href="#work" data-edit="hero.btn1" data-label="Первая кнопка">Смотреть работы</a></div>
         </div>
@@ -816,7 +815,6 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
   <div class="wrap">
     <div class="ft-main">
       <div class="ft-brand">
-        <a class="ft-logo" href="#top" data-owner="name" aria-label="Stepan Evsin — на главную">Stepan Evsin</a>
         <p data-edit="footer.about" data-label="Текст в футере">Сайты для бизнеса под ключ: дизайн, разработка, тексты и запуск. Магазины, сайты врачей, студии и Telegram-боты.</p>
         <div class="ft-socials">
           <a href="https://t.me/finpolq" data-contact-tg target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/icons/telegram.webp" alt="" width="28" height="28" loading="lazy"></a>
@@ -838,9 +836,8 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
         <a href="https://max.ru/" data-contact-max target="_blank" rel="noopener">MAX</a>
       </div>
     </div>
-    <div class="ft-big" aria-hidden="true">Stepan Evsin</div>
     <div class="ft-bottom">
-      <span data-owner="copy">© 2026 Stepan Evsin</span>
+      <span>© 2026</span>
       <span data-edit="footer.note" data-label="Подпись внизу">Сайты, магазины и Telegram-боты под ключ.</span>
       <a class="ft-up" href="#top">Наверх ↑</a>
     </div>
