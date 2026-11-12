@@ -274,6 +274,7 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .i-m b{display:block;margin-top:4px;font:600 clamp(24px,2.3vw,34px)/1.05 var(--serif)}
 .i-m b.r{color:var(--red)}
 .i-a{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.i-a .pill{border-radius:999px}
 .i-a .pill.o{color:var(--ink);border-color:rgba(0,0,0,.4);background:transparent}
 .i-a .pill.o:hover{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:none}
 .prog{position:absolute;left:50%;bottom:clamp(18px,4vh,34px);z-index:3;transform:translateX(-50%);display:flex;align-items:center;gap:16px;font:500 12px var(--serif);letter-spacing:.2em;color:#3c3835}
@@ -477,6 +478,15 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
       ],
       "worksFor": {
         "@id": "https://sevsin.ru/#business"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Веб-разработчик",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Россия"
+        },
+        "skills": "Разработка сайтов, веб-дизайн, интернет-магазины, Telegram-боты"
       }
     },
     {
@@ -525,6 +535,11 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
               "provider": {
                 "@id": "https://sevsin.ru/#business"
               }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "RUB",
+              "minPrice": 20000
             }
           },
           {
@@ -536,6 +551,11 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
               "provider": {
                 "@id": "https://sevsin.ru/#business"
               }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "RUB",
+              "minPrice": 50000
             }
           },
           {
@@ -547,6 +567,11 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
               "provider": {
                 "@id": "https://sevsin.ru/#business"
               }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "RUB",
+              "minPrice": 20000
             }
           },
           {
@@ -558,9 +583,18 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
               "provider": {
                 "@id": "https://sevsin.ru/#business"
               }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "RUB",
+              "minPrice": 25000
             }
           }
         ]
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 1
       }
     },
     {
@@ -591,7 +625,24 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
       },
       "inLanguage": "ru-RU",
       "datePublished": "2026-11-11",
-      "dateModified": "2026-11-11"
+      "dateModified": "2026-11-11",
+      "mainEntity": {
+        "@id": "https://sevsin.ru/#business"
+      },
+      "isAccessibleForFree": true,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".hero .lead"
+        ]
+      },
+      "breadcrumb": {
+        "@id": "https://sevsin.ru/#breadcrumb"
+      },
+      "hasPart": {
+        "@id": "https://sevsin.ru/#howto"
+      }
     },
     {
       "@type": "ImageObject",
@@ -664,6 +715,55 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
               "@id": "https://sevsin.ru/#person"
             }
           }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sevsin.ru/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://sevsin.ru/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://sevsin.ru/#howto",
+      "name": "Как заказать сайт",
+      "description": "Четыре шага от заявки до запуска сайта.",
+      "url": "https://sevsin.ru/#steps",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Пишите, где вам удобно",
+          "text": "Коротко опишите проект и пришлите сайты, которые нравятся.",
+          "url": "https://sevsin.ru/#steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Обсуждаем",
+          "text": "Задаю вопросы, предлагаю решение, называю срок и цену.",
+          "url": "https://sevsin.ru/#steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Смотрите черновик",
+          "text": "Показываю живую страницу по ссылке, а не картинки. Вносим правки.",
+          "url": "https://sevsin.ru/#steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Запускаем",
+          "text": "Выкладываю сайт, подключаю домен и заявки. Показываю, как всем пользоваться.",
+          "url": "https://sevsin.ru/#steps"
         }
       ]
     }
