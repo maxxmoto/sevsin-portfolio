@@ -66,7 +66,7 @@
 <meta name="twitter:image" content="https://sevsin.ru/og-image.png">
 <meta name="twitter:image:alt" content="Stepan Evsin — продающие сайты для бизнеса">
 <meta name="twitter:url" content="https://sevsin.ru/">
-<link rel="preload" as="image" href="/logo-448.webp" imagesrcset="/logo-224.webp 224w, /logo-448.webp 448w, /logo-672.webp 672w" imagesizes="(max-width:900px) 150px, 224px" fetchpriority="high">
+<link rel="preload" as="image" href="/logo-224.webp" fetchpriority="high">
 <link rel="preload" href="/assets/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/gNMKW3F-SZuj7xmb-HY6EQ.woff2" as="font" type="font/woff2" crossorigin>
 <style id="critical-fonts">@font-face {
@@ -296,6 +296,7 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .duo .anch{position:absolute;top:150vh;left:0}
 .duo-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 .hero{position:absolute;inset:0;z-index:2;pointer-events:none}
+html.lite .hero{background:radial-gradient(120% 110% at 68% 42%,#5b0712 0%,#2a050b 38%,#100305 70%,#070707 100%)}
 .gl{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-in{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto;align-items:center;column-gap:40px;padding-block:120px clamp(24px,5vh,54px)}
 .hero-in a,.hero-in button{pointer-events:auto}
@@ -459,8 +460,8 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .st:hover b,.st:hover p{color:#fff}
 
 /* contact: red silk folds and a hand-drawn frame */
-.final{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding-inline:var(--gut);padding-block:clamp(110px,15vw,200px) clamp(36px,5vw,70px);background:linear-gradient(112deg,#070707 8%,#2a0005 24%,#9c0616 36%,#3d0007 45%,#d3142a 57%,#5c000c 66%,#e3172b 76%,#2a0005 88%,#070707);background-size:220% 100%;animation:silk 18s ease-in-out infinite alternate}
-@keyframes silk{to{background-position:100% 0}}
+.final{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding-inline:var(--gut);padding-block:clamp(110px,15vw,200px) clamp(36px,5vw,70px);background:linear-gradient(112deg,#070707 8%,#2a0005 24%,#9c0616 36%,#3d0007 45%,#d3142a 57%,#5c000c 66%,#e3172b 76%,#2a0005 88%,#070707);background-size:100% 100%}
+
 .final::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--bg),transparent 30%,transparent 70%,var(--bg))}
 .final .fr{position:relative;display:inline-block;padding:clamp(28px,4vw,60px) clamp(22px,5vw,80px);max-width:min(1100px,100%)}
 .final .fr svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
@@ -479,7 +480,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 .ft-socials a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:border-color .25s,background .25s,transform .25s}
 .ft-socials a:hover{border-color:var(--red);background:rgba(227,23,43,.12);transform:translateY(-2px)}
 .ft-socials img{width:28px;height:28px;object-fit:contain;border-radius:50%;display:block}
-.ft-col h4{margin-bottom:12px;font:500 10.5px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.ft-col h3{margin-bottom:12px;font:500 10.5px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
 .ft-col a{display:block;padding:6px 0;font-size:14px;color:rgba(243,239,233,.72);transition:color .2s}
 .ft-col a:hover{color:#fff}
 .ft-col .ft-pill{display:inline-flex;align-items:center;justify-content:center;margin:2px 0 14px;min-height:44px;padding:0 22px;font-size:11.5px;border-radius:999px;color:#fff}
@@ -932,7 +933,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><picture><source type="image/webp" srcset="/logo-224.webp 224w, /logo-448.webp 448w, /logo-672.webp 672w" sizes="(max-width:900px) 150px, 224px"><img class="brand-logo" src="/logo-448.png" alt="Stepan Evsin" width="448" height="108" decoding="async" fetchpriority="high"></picture><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Сайты под ключ</span></a>
+    <a class="brand" href="#top" aria-label="Stepan Evsin — в начало"><picture><source type="image/webp" srcset="/logo-224.webp 224w" sizes="(max-width:900px) 150px, 224px"><img class="brand-logo" src="/logo-224.png" alt="Stepan Evsin" width="224" height="54" decoding="async" fetchpriority="high"></picture><span data-edit="nav.cap" data-label="Подпись под именем">Дизайн и разработка сайтов<br>Сайты под ключ</span></a>
     <nav class="menu" aria-label="Разделы"><a href="#about" data-edit="nav.about" data-label="Меню: обо мне">Обо мне</a><a href="#work" data-edit="nav.work" data-label="Меню: работы">Работы</a><a href="#reviews" class="nrv" hidden data-edit="nav.reviews" data-label="Меню: отзывы">Отзывы</a><a href="#steps" data-edit="nav.steps" data-label="Меню: как заказать">Как заказать</a><a class="cta" href="https://t.me/finpolq" data-contact target="_blank" rel="noopener" data-edit="nav.cta" data-label="Кнопка в меню">Написать</a></nav>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav">Меню <i></i></button>
   </div>
@@ -947,7 +948,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
       <i class="lay pt p5"></i><i class="lay pt p6"></i><i class="lay pt p1"></i>
       <figure class="lay cut c1"><div class="bar"><i></i><i></i><i></i><b id="cutU1"></b></div><div class="shot"><img id="cut1" alt="" decoding="async"></div><figcaption><em id="cutN1" style="font-style:normal"></em><span>Открыть →</span></figcaption></figure>
       <figure class="lay cut c2"><div class="bar"><i></i><i></i><i></i><b id="cutU2"></b></div><div class="shot"><img id="cut2" alt="" decoding="async"></div><figcaption><em id="cutN2" style="font-style:normal"></em><span>Открыть →</span></figcaption></figure>
-      <div class="lay mark" aria-hidden="true"><img class="mark-photo" src="/assets/stepan.webp" alt="" width="1000" height="1000" loading="lazy" decoding="async"><svg viewBox="0 0 200 200"><defs><linearGradient id="gl1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b3b3b"/><stop offset=".35" stop-color="#050505"/><stop offset=".55" stop-color="#262626"/><stop offset="1" stop-color="#000"/></linearGradient><linearGradient id="gl2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4a4a"/><stop offset=".4" stop-color="#0a0a0a"/><stop offset="1" stop-color="#1c1c1c"/></linearGradient></defs>
+      <div class="lay mark" aria-hidden="true"><img class="mark-photo" src="/assets/stepan-480.webp" srcset="/assets/stepan-320.webp 320w, /assets/stepan-480.webp 480w, /assets/stepan-720.webp 720w" sizes="(max-width:560px) 120px, (max-width:900px) 200px, 354px" alt="" width="720" height="720" loading="lazy" decoding="async"><svg viewBox="0 0 200 200"><defs><linearGradient id="gl1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b3b3b"/><stop offset=".35" stop-color="#050505"/><stop offset=".55" stop-color="#262626"/><stop offset="1" stop-color="#000"/></linearGradient><linearGradient id="gl2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4a4a"/><stop offset=".4" stop-color="#0a0a0a"/><stop offset="1" stop-color="#1c1c1c"/></linearGradient></defs>
         <g class="br"><polygon fill="url(#gl1)" points="34,34 98,34 98,50 50,50 50,98 34,98"/><polygon fill="url(#gl2)" points="102,22 178,22 178,98 162,98 162,38 102,38"/><polygon fill="url(#gl2)" points="22,102 38,102 38,162 98,162 98,178 22,178"/><polygon fill="url(#gl1)" points="150,102 166,102 166,166 102,166 102,150 150,150"/></g>
         <polygon fill="url(#gl1)" points="0,100 46,54 58,66 24,100 58,134 46,146"/><polygon fill="url(#gl2)" points="200,100 154,54 142,66 176,100 142,134 154,146"/></svg></div>
       <i class="lay pt p2"></i><i class="lay pt p3"></i><i class="lay pt p4"></i>
@@ -1060,14 +1061,14 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
         </div>
       </div>
       <nav class="ft-col" aria-label="Разделы сайта">
-        <h4>Разделы</h4>
+        <h3>Разделы</h3>
         <a href="#about">Обо мне</a>
         <a href="#work">Работы</a>
         <a href="#steps">Как заказать</a>
         <a href="#contact">Контакты</a>
       </nav>
       <div class="ft-col">
-        <h4>Связаться</h4>
+        <h3>Связаться</h3>
         <a class="pill ft-pill" href="https://t.me/finpolq" data-contact>Написать</a>
         <a href="https://t.me/finpolq" data-contact-tg target="_blank" rel="noopener">Telegram</a>
         <a href="https://max.ru/" data-contact-max target="_blank" rel="noopener">MAX</a>
@@ -1203,8 +1204,9 @@ seen.observe($('#work'));seen.observe($('#contact'));
  const duo=$('.duo'),clg=$('#clg'),heroIn=$('.hero-in'),dark=$('.clg .dark');
  /* the two cutouts are real works: a click opens that site */
  const withImg=WORKS.map((w,i)=>({w,i})).filter(x=>x.w.img),pick=[withImg[0],withImg[3]||withImg[1]];
- ['#cut1','#cut2'].forEach((s,k)=>{const x=pick[k],im=$(s);if(!x){im.closest('figure').hidden=true;return}im.src=x.w.img;im.alt=x.w.n;$('#cutU'+(k+1)).textContent=x.w.n;$('#cutN'+(k+1)).textContent=[x.w.n,x.w.niche].filter(Boolean).join(' · ');
-  const f=im.closest('figure');
+ ['#cut1','#cut2'].forEach((s,k)=>{const x=pick[k],im=$(s);if(!x){im.closest('figure').hidden=true;return}im.alt=x.w.n;$('#cutU'+(k+1)).textContent=x.w.n;$('#cutN'+(k+1)).textContent=[x.w.n,x.w.niche].filter(Boolean).join(' · ');
+  const m=/^assets\/([\w-]+)\.webp$/.exec(x.w.img);if(m){im.srcset=`assets/${m[1]}-480.webp 480w`;im.sizes='(max-width:900px) 45vw, 453px';im.src=`assets/${m[1]}-480.webp`}else{im.src=x.w.img}
+   const f=im.closest('figure');
    const a=document.createElement('a');a.className='cut-link';a.href=x.w.link;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Открыть сайт '+x.w.n);
    a.addEventListener('click',e=>{if(x.w.preview){e.preventDefault();openV(x.i)}else{ST.ev('op',x.w.id)}});
    f.append(a)});
@@ -1252,7 +1254,7 @@ seen.observe($('#work'));seen.observe($('#contact'));
  sec.style.height=(N*90+60)+'vh';
  const imgs=WORKS.map(w=>w.img).filter(Boolean);
  wall.innerHTML=Array.from({length:30},(_,i)=>`<i style="background-image:url('${esc(imgs[(i*7)%imgs.length]||'')}')"></i>`).join('');
- stack.innerHTML=WORKS.map((w,i)=>{const m=/^assets\/([\w-]+)\.webp$/.exec(w.img||''),src=k=>m?`assets/${m[1]}${k}.webp`:w.img,im=k=>w.img?`<span class="scr"><img src="${esc(src(k))}" alt="${k?'':esc(w.n+' — '+w.niche)}" loading="lazy" decoding="async"></span>`:'<span class="scr"></span>';
+ stack.innerHTML=WORKS.map((w,i)=>{const m=/^assets\/([\w-]+)\.webp$/.exec(w.img||''),src=k=>m?`assets/${m[1]}${k}.webp`:w.img,im=k=>w.img?`<span class="scr"><img src="${esc(src(k||'-480'))}"${k?'':` srcset="${esc(src('-480'))} 480w" sizes="(max-width:900px) 90vw, 453px"`} alt="${k?'':esc(w.n+' — '+w.niche)}" loading="lazy" decoding="async"></span>`:'<span class="scr"></span>';
   return `<div class="set" data-i="${i}"><a class="k k1" href="${esc(w.link)}" target="_blank" rel="noopener" data-op="${i}" aria-label="Открыть сайт ${esc(w.n)}"><span class="bz">${im('')}</span><span class="neck"></span><span class="base"></span></a><span class="k k3" ${w.preview?`data-v="${i}"`:''}><span class="bz">${im('-t')}</span></span><span class="k k2" ${w.preview?`data-v="${i}"`:''}><span class="bz">${im('-m')}</span></span></div>`}).join('');
  const sets=$$('.set'),pad=i=>String(i+1).padStart(2,'0');
  $('#pZ').textContent=pad(N-1);
@@ -1410,12 +1412,15 @@ $('#vX').onclick=closeV;
 addEventListener('keydown',e=>{if(e.key==='Escape')closeV()});
 </script>
 <script type="module">
+const lite=matchMedia('(max-width: 900px)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData===true;
+if(lite){document.documentElement.classList.add('lite')}else{
 const bootScene=()=>import('./scene.js').catch(()=>{});
 const startScene=()=>{if('requestIdleCallback' in window)requestIdleCallback(bootScene,{timeout:1800});else setTimeout(bootScene,1000)};
 if(document.readyState==='complete')startScene();else addEventListener('load',startScene,{once:true});
+}
 </script>
 <script type="module">
-const lazyScene=(sel,src)=>{const el=document.querySelector(sel);if(!el)return;let done=false;const io=new IntersectionObserver(es=>{if(done||!es.some(e=>e.isIntersecting))return;done=true;io.disconnect();import(src).catch(()=>{})},{rootMargin:'600px 0px'});io.observe(el)};
+const lazyScene=(sel,src)=>{if(document.documentElement.classList.contains('lite'))return;const el=document.querySelector(sel);if(!el)return;let done=false;const io=new IntersectionObserver(es=>{if(done||!es.some(e=>e.isIntersecting))return;done=true;io.disconnect();import(src).catch(()=>{})},{rootMargin:'600px 0px'});io.observe(el)};
 lazyScene('.bird','./bird.js');lazyScene('.burn','./burn.js');
 </script>
 </body>

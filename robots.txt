@@ -4,4 +4,3 @@ Disallow: /api/
 Disallow: /serve.py
 
 Sitemap: https://sevsin.ru/sitemap.xml
-Agentmap: https://sevsin.ru/.well-known/ai-catalog.json
