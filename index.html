@@ -296,7 +296,6 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .duo .anch{position:absolute;top:150vh;left:0}
 .duo-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 .hero{position:absolute;inset:0;z-index:2;pointer-events:none}
-html.lite .hero{background:radial-gradient(120% 110% at 68% 42%,#5b0712 0%,#2a050b 38%,#100305 70%,#070707 100%)}
 .gl{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-in{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto;align-items:center;column-gap:40px;padding-block:120px clamp(24px,5vh,54px)}
 .hero-in a,.hero-in button{pointer-events:auto}
@@ -460,8 +459,9 @@ html.lite .hero{background:radial-gradient(120% 110% at 68% 42%,#5b0712 0%,#2a05
 .st:hover b,.st:hover p{color:#fff}
 
 /* contact: red silk folds and a hand-drawn frame */
-.final{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding-inline:var(--gut);padding-block:clamp(110px,15vw,200px) clamp(36px,5vw,70px);background:linear-gradient(112deg,#070707 8%,#2a0005 24%,#9c0616 36%,#3d0007 45%,#d3142a 57%,#5c000c 66%,#e3172b 76%,#2a0005 88%,#070707);background-size:100% 100%}
+.final{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding-inline:var(--gut);padding-block:clamp(110px,15vw,200px) clamp(36px,5vw,70px);background:linear-gradient(112deg,#070707 8%,#2a0005 24%,#9c0616 36%,#3d0007 45%,#d3142a 57%,#5c000c 66%,#e3172b 76%,#2a0005 88%,#070707);background-size:220% 100%;animation:silk 18s ease-in-out infinite alternate}
 
+@keyframes silk{to{background-position:100% 0}}
 .final::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--bg),transparent 30%,transparent 70%,var(--bg))}
 .final .fr{position:relative;display:inline-block;padding:clamp(28px,4vw,60px) clamp(22px,5vw,80px);max-width:min(1100px,100%)}
 .final .fr svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
@@ -1412,15 +1412,12 @@ $('#vX').onclick=closeV;
 addEventListener('keydown',e=>{if(e.key==='Escape')closeV()});
 </script>
 <script type="module">
-const lite=matchMedia('(max-width: 900px)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData===true;
-if(lite){document.documentElement.classList.add('lite')}else{
 const bootScene=()=>import('./scene.js').catch(()=>{});
 const startScene=()=>{if('requestIdleCallback' in window)requestIdleCallback(bootScene,{timeout:1800});else setTimeout(bootScene,1000)};
 if(document.readyState==='complete')startScene();else addEventListener('load',startScene,{once:true});
-}
 </script>
 <script type="module">
-const lazyScene=(sel,src)=>{if(document.documentElement.classList.contains('lite'))return;const el=document.querySelector(sel);if(!el)return;let done=false;const io=new IntersectionObserver(es=>{if(done||!es.some(e=>e.isIntersecting))return;done=true;io.disconnect();import(src).catch(()=>{})},{rootMargin:'600px 0px'});io.observe(el)};
+const lazyScene=(sel,src)=>{const el=document.querySelector(sel);if(!el)return;let done=false;const io=new IntersectionObserver(es=>{if(done||!es.some(e=>e.isIntersecting))return;done=true;io.disconnect();import(src).catch(()=>{})},{rootMargin:'600px 0px'});io.observe(el)};
 lazyScene('.bird','./bird.js');lazyScene('.burn','./burn.js');
 </script>
 </body>
