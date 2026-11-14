@@ -45,6 +45,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e3172b">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="ai-catalog" href="/.well-known/ai-catalog.json">
 <link rel="author" href="https://t.me/finpolq">
 <link rel="me" href="https://t.me/finpolq">
 <meta property="og:type" content="website">
@@ -343,6 +344,7 @@ h2{font-size:clamp(36px,5.6vw,86px)}
 .cut figcaption span{color:var(--red)}
 .cut:hover{box-shadow:0 50px 90px -26px rgba(0,0,0,.6),0 0 0 2px var(--red);scale:1.04}
 .cut:hover img{scale:1.06}
+.cut-link{position:absolute;inset:0;z-index:7;border-radius:inherit;cursor:pointer}
 .c1{left:3.5%;bottom:9%;width:min(23vw,360px);transform:translate3d(calc((1 - var(--a))*-40vw + var(--mx)*22px),calc(var(--my)*18px),0) rotate(-6deg);translate:calc(var(--x,0)*-70vw) calc(var(--x,0)*10vh)}
 .c2{right:3.5%;bottom:14%;width:min(21vw,330px);transform:translate3d(calc((1 - var(--a))*40vw + var(--mx)*26px),calc(var(--my)*20px),0) rotate(5deg);translate:calc(var(--x,0)*70vw) calc(var(--x,0)*-6vh)}
 .clg .c-can{translate:calc(var(--x,0)*-45vw) 0}.clg .c-text{translate:calc(var(--x,0)*45vw) 0}
@@ -1202,9 +1204,10 @@ seen.observe($('#work'));seen.observe($('#contact'));
  /* the two cutouts are real works: a click opens that site */
  const withImg=WORKS.map((w,i)=>({w,i})).filter(x=>x.w.img),pick=[withImg[0],withImg[3]||withImg[1]];
  ['#cut1','#cut2'].forEach((s,k)=>{const x=pick[k],im=$(s);if(!x){im.closest('figure').hidden=true;return}im.src=x.w.img;im.alt=x.w.n;$('#cutU'+(k+1)).textContent=x.w.n;$('#cutN'+(k+1)).textContent=[x.w.n,x.w.niche].filter(Boolean).join(' · ');
-  const f=im.closest('figure');f.setAttribute('role','link');f.tabIndex=0;f.setAttribute('aria-label','Открыть сайт '+x.w.n);
-  const open=()=>{if(x.w.preview)openV(x.i);else{ST.ev('op',x.w.id);window.open(x.w.link,'_blank','noopener')}};
-  f.addEventListener('click',open);f.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});
+  const f=im.closest('figure');
+   const a=document.createElement('a');a.className='cut-link';a.href=x.w.link;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Открыть сайт '+x.w.n);
+   a.addEventListener('click',e=>{if(x.w.preview){e.preventDefault();openV(x.i)}else{ST.ev('op',x.w.id)}});
+   f.append(a)});
  const sm=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
  let mx=0,my=0,ax=0,ay=0,raf=0,last=-1;
  function step(){raf=0;

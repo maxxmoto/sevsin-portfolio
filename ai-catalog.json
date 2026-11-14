@@ -1,0 +1,33 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Stepan Evsin",
+    "identifier": "sevsin.ru",
+    "documentationUrl": "https://sevsin.ru/",
+    "logoUrl": "https://sevsin.ru/logo-448.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:sevsin.ru:website:portfolio",
+      "displayName": "Stepan Evsin — разработка сайтов",
+      "type": "text/html",
+      "url": "https://sevsin.ru/",
+      "description": "Персональный сайт веб-разработчика и дизайнера Степана Евсина: разработка продающих сайтов, Telegram-ботов и digital-дизайн.",
+      "tags": [
+        "web development",
+        "website development",
+        "telegram bots",
+        "web design",
+        "portfolio"
+      ],
+      "representativeQueries": [
+        "разработка сайта для бизнеса",
+        "заказать Telegram-бота",
+        "сделать продающий сайт под ключ",
+        "веб-дизайнер и разработчик"
+      ],
+      "version": "1.0",
+      "updatedAt": "2026-11-14T00:00:00Z"
+    }
+  ]
+}

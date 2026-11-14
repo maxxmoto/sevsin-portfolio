@@ -1,0 +1,28 @@
+# Stepan Evsin — разработка продающих сайтов
+
+> Персональный сайт веб-разработчика и дизайнера Степана Евсина. Разработка сайтов под ключ, Telegram-ботов, дизайн и запуск проектов для бизнеса.
+
+## Основные разделы
+
+- [Главная](https://sevsin.ru/)
+- [Обо мне](https://sevsin.ru/#about)
+- [Работы](https://sevsin.ru/#work)
+- [Как заказать](https://sevsin.ru/#steps)
+- [Написать](https://sevsin.ru/#contact)
+
+## Что делаю
+
+- [Разработка сайтов под ключ](https://sevsin.ru/#about)
+- [Кейсы и примеры работ](https://sevsin.ru/#work)
+- [Процесс заказа](https://sevsin.ru/#steps)
+- [Telegram-боты и автоматизация](https://sevsin.ru/#about)
+
+## Контакты
+
+- [Telegram](https://t.me/finpolq)
+- [MAX](https://max.ru/)
+- [GitHub](https://github.com/maxxmoto/sevsin-portfolio)
+
+## Для ИИ-агентов
+
+- [ai-catalog.json](https://sevsin.ru/.well-known/ai-catalog.json)
